@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demosp.mapper.DeptMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+<!--    <resultMap type="io.ss.modules.game.entity.GameDrawConfigEntity" id="gameDrawConfigMap">-->
+<!--        <result property="taskId" column="task_id"/>-->
+<!--        <result property="gameName" column="game_name"/>-->
+<!--        <result property="gameGroup" column="game_group"/>-->
+<!--        <result property="gameUrl" column="game_url"/>-->
+<!--        <result property="gameParams" column="game_params"/>-->
+<!--        <result property="typeName" column="type_name"/>-->
+<!--        <result property="jsonPath" column="json_path"/>-->
+<!--        <result property="gameNumber" column="game_number"/>-->
+<!--        <result property="remark" column="remark"/>-->
+<!--        <result property="reportId" column="report_id"/>-->
+<!--        <result property="gameStatus" column="game_status"/>-->
+<!--        <result property="createTime" column="create_time"/>-->
+<!--        <result property="updateTime" column="update_time"/>-->
+<!--    </resultMap>-->
+
+    <select id="getById" resultType="com.example.demosp.pojo.Dept">
+        select * from dept where id =#{id}
+
+    </select>
+
+
+
+
+
+</mapper>

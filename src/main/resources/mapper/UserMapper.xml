@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demosp.mapper.UserMapper">
+
+    <resultMap type="com.example.demosp.pojo.User" id="BaseResultMap">
+        <id property="id" column="id" jdbcType="BIGINT" />
+        <result property="name" column="name" jdbcType="VARCHAR" />
+        <result property="dpid" column="dpid" jdbcType="BIGINT" />
+        <association property="dept" column="dpid"  javaType="com.example.demosp.pojo.Dept" select="com.example.demosp.mapper.DeptMapper.getById"></association>
+    </resultMap>
+
+    <select id="getAll" resultType="com.example.demosp.pojo.User">
+        select * from user
+
+    </select>
+
+    <select id="getLb" resultMap="BaseResultMap">
+        select * from user where id =#{id}
+
+    </select>
+
+
+
+
+
+</mapper>
